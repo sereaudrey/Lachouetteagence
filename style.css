@@ -1,3 +1,9 @@
+a:focus, input:focus, button:focus, select:focus textarea:focus {
+  font-weight: bold;
+  font-size: 30px;
+  background-color: #F3976C;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -32,7 +38,6 @@ body {
 a,
 button {
     transition: all .3s ease-in-out;
-    outline: none!important;
 }
 
 a:hover {
@@ -482,10 +487,6 @@ nav .caret {
     background: rgba(0, 0, 0, .3);
 }
 
-button {
-    outline: none!important;
-}
-
 .btn-rd {
     border-radius: 40px;
 }
@@ -726,17 +727,17 @@ p {
     margin: auto auto auto auto;
 }
 
-h2 {
+h3 {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 700;
     color: #333333!important;
 }
-h3 {
+
+h2 {
     font-size: 22px;
     line-height: 1.4em;
 }
-
 
 
 .med-width-whitespace {
@@ -873,13 +874,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -897,20 +898,11 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
+    
     .bloc-group,
     .bloc-group .bloc {
         display: block;
         width: 100%;
-    }
-    .bloc-fill-screen .fill-bloc-top-edge,
-    .bloc-fill-screen .fill-bloc-bottom-edge {
-        padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
